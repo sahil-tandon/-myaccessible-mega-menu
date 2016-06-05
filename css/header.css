@@ -99,8 +99,7 @@ header.global-header {
 /*Start: Header Top*/
 .header-top{
     display: block;
-    padding-top: 18px;
-    float: left;
+    padding-top: 15px;
     width: 100%;
 }
 .header-links-wrap-1{
@@ -119,21 +118,29 @@ header.global-header {
 }
 .header-links-1 li{
     float: left;
-    padding-right: 25px;    
+    padding-right: 25px;       
+}
+.header-links-1 li a{
+    display: inline-block;
+    text-decoration: none;
     font-family: Arial;
     font-size: 1em;
     color: #cfb56a;
     line-height: 1em;
-    letter-spacing: 0.05em;    
+    letter-spacing: 0.05em; 
 }
 .header-links-2 li{
     float: left;    
-    padding-left: 25px;
+    padding-left: 25px;    
+}
+.header-links-2 li a{
+    display: inline-block;
+    text-decoration: none;
     font-family: Arial;
     font-size: 1em;
     color: #fff;
     line-height: 1em;
-    letter-spacing: 0.05em;    
+    letter-spacing: 0.05em; 
 }
 .header-logo{
     display: block;
@@ -193,26 +200,62 @@ header.global-header {
     color: #cfb56a;
 }
 .sub-nav {
-    position: absolute;
     display: none;
-    top: 2.6em;
-    margin-top: -1px;
-    padding: 0.5em 1em;
-    border: 1px solid #dedede;
-    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 1.8em;
+    width: 100%;
+    background-color: #3c1c0d;
+}
+.sub-nav-content {
+    display: inline-block;
+    border-top: 1px solid #cfb56a;
+    margin: 0 24px;
+    padding: 50px 0;
+}
+.sub-nav-group li{
+    display: block;
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 20px 0;
+}
+.sub-nav-group.image-group li:first-child{
+    text-align: center;
+}
+.sub-nav-group li:first-child{
+    padding-bottom: 30px;
+}
+.sub-nav-group li a{
+    display: inline-block;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 1em;
+    line-height: 1em;
+    letter-spacing: 0.05em;
+    color: #fff;
+}
+.sub-nav-group li:first-child a{
+    display: inline-block;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 0.875em;
+    line-height: 0.875em;
+    min-height: 0.875em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #fff;
 }
 .sub-nav.open {
     display: block;
 }
-.sub-nav ul {
+.sub-nav-content ul {
     display: inline-block;
-    vertical-align: top;
-    margin: 0 1em 0 0;
+    width: 23.438%;
+    margin-right: 2.084%;
     padding: 0;
+    float: left;
 }
-.sub-nav li {
-    display: block;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.sub-nav-content ul:last-child {
+    margin-right: 0;
 }
