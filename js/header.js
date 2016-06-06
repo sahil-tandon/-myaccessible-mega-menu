@@ -4,7 +4,7 @@ $("nav:first").accessibleMegaMenu({
     uuidPrefix: "accessible-megamenu",
 
     /* css class used to define the megamenu styling */
-    menuClass: "nav-menu-blah",
+    menuClass: "nav-menu",
 
     /* css class for a top-level navigation item in the megamenu */
     topNavItemClass: "nav-item",

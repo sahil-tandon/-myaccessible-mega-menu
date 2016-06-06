@@ -193,7 +193,7 @@ header.global-header {
 .nav-item > a.open {
     z-index: 1;
 }
-.nav-item > a.hover{
+.nav-item > a.open{
     text-decoration: none;
     font-family: Arial;
     font-size: 0.875em;
