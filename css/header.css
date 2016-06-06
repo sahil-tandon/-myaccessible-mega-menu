@@ -10,6 +10,7 @@
     max-width:1152px;
     margin:0 auto;
     padding: 0 24px;
+    box-sizing: border-box;
 }
 /*End: Global Styles (Remove after integrating with Godiva Codebase)*/
 
@@ -212,6 +213,18 @@ header.global-header {
     border-top: 1px solid #cfb56a;
     margin: 0 24px;
     padding: 50px 0;
+    padding-top: 0;
+    opacity: 0;
+    transition: padding-top 0.25s ease-in-out;
+    -webkit-transition: padding-top 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
+    -webkit-transition: opacity 0.25s ease-in-out;
+    width: calc(100% - 48px);
+    max-width: 1104px;
+}
+.sub-nav.open .sub-nav-content{
+    padding-top: 50px;
+    opacity: 1;
 }
 .sub-nav-group li{
     display: block;
@@ -226,6 +239,9 @@ header.global-header {
 .sub-nav-group li:first-child{
     padding-bottom: 30px;
 }
+.sub-nav-group li img{
+    width: 100%;
+}
 .sub-nav-group li a{
     display: inline-block;
     text-decoration: none;
@@ -234,6 +250,8 @@ header.global-header {
     line-height: 1em;
     letter-spacing: 0.05em;
     color: #fff;
+    width: 100%;
+    max-width: 100%;
 }
 .sub-nav-group li:first-child a{
     display: inline-block;
@@ -251,8 +269,8 @@ header.global-header {
 }
 .sub-nav-content ul {
     display: inline-block;
-    width: 23.438%;
-    margin-right: 2.084%;
+    width: 23.5%;
+    margin-right: 2%;
     padding: 0;
     float: left;
 }
