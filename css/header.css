@@ -145,8 +145,75 @@ header.global-header {
     float: left;
 }
 
+.nav-wrapper{
+    width: 80%;
+    min-height: calc(100vh - 50px);
+    background: #3c1c0d;
+}
 .nav-item .sub-nav{
     display: none;
+}
+.nav-item{
+    border-bottom: 1px solid #4d3722;
+}
+.nav-item:first-child{
+    border-top: 1px solid #4d3722;
+}
+.nav-item>a{
+    font-size: 0.875em;
+    font-family: Arial;
+    letter-spacing: 0.10em;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100%;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    box-sizing: border-box;
+    padding-left: 15px;
+}
+.sub-nav-content{
+    padding: 9px 0;
+}
+.sub-nav-content .image-group img{
+    display: none;
+}
+.sub-nav-content .image-group li:not(:first-child){
+    display: none;
+}
+ul.sub-nav-group li:first-child a{
+    font-size: 0.875em;
+    font-family: Arial;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #9c8b7a;
+    letter-spacing: 0.10em;
+    display: inline-block;
+    margin: 16.5px 0 16.5px 15px;
+    box-sizing: border-box;
+}
+ul.sub-nav-group li a{
+    font-size: 0.9375em;
+    font-family: Arial;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    margin: 16.5px 0 16.5px 30px;
+    box-sizing: border-box;
+}
+ul.sub-nav-group.image-group li a{
+    font-size: 0.875em;
+    font-family: Arial;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 0.10em;
+    display: inline-block;
+    border-bottom: 1px solid #cfb56a;
+    margin: 16.5px 0 16.5px 15px;
+    box-sizing: border-box;
 }
 
 @media screen and (min-width: 769px){
@@ -226,6 +293,8 @@ header.global-header {
         width: 100%;
         text-align: center;
         padding-top: 22px;
+        min-height: auto;
+        background: none;
     }
     .nav {
 
@@ -266,8 +335,9 @@ header.global-header {
         text-transform: uppercase;
         color: #cfb56a;
     }
-    .sub-nav {
+    .nav-item .sub-nav {
         visibility: hidden;
+        display: block;
         opacity: 0;
         position: absolute;
         left: 0;
