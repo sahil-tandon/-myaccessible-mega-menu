@@ -31,7 +31,7 @@ $(document).ready(function(){
     });
 
     $('.mobile-nav-toggle').on('click', function(){
-        $(this).toggleClass("mobile-nav-active");
+        $('.header-top').toggleClass("mobile-nav-active");
         $('.nav-wrapper').toggleClass("nav-open");
     });
 })

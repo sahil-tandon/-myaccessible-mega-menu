@@ -90,6 +90,8 @@ header.global-header {
     width: 100%;
     background-color: #3c1c0d;
     color: #fff;
+    position: fixed;
+    z-index: 999;
 }
 .header-wrap{
     display: block;
@@ -105,19 +107,24 @@ header.global-header {
 .header-links-wrap-1{
     display: block;
     float: left;
+    position: relative;
+    z-index: 2;
 }
 .header-links-wrap-2{
     display: block;
     float: right;
+    position: relative;
+    z-index: 2;
 }
 .header-links-1,
 .header-links-2{
     display: none;
 }
-.header-logo{
+.header-logo-wrap{
     display: block;
     text-align: center;
     position: relative;
+    z-index: 1;
 }
 .logo-big{ 
     display: none;
@@ -134,6 +141,14 @@ header.global-header {
     display: inline-block;
     padding: 18px 15px;
 }
+.header-top:not(.mobile-nav-active) .mobile-nav-toggle img:last-child,
+.header-top.mobile-nav-active .mobile-nav-toggle img:first-child{
+    display: none;
+}
+.header-top.mobile-nav-active .mobile-nav-toggle img:last-child,
+.header-top:not(.mobile-nav-active) .mobile-nav-toggle img:first-child{
+    display: block;
+}
 .mobile-bag{
     padding-left: 7.5px;
 }
@@ -145,19 +160,23 @@ header.global-header {
     float: left;
 }
 .nav-wrapper{
-    display: none;
     width: 80%;
     min-height: calc(100vh - 50px);
     background: #3c1c0d;
+    transition: transform .3s;
+    transform: translateX(-100%);
 }
 .nav-wrapper.nav-open{
-    display: block;
+    transform: translateX(0);
 }
 .nav-item .sub-nav{
     display: none;
 }
 .nav-item.l1-open .sub-nav{
     display: block;
+}
+.nav-item.l1-open .nav-l1{
+    background: #cfb56a;
 }
 .nav-item{
     border-bottom: 1px solid #4d3722;
@@ -210,6 +229,7 @@ header.global-header {
 }
 .sub-nav-group.image-group li a{
     font-size: 0.875em;
+    color: #fff;
     letter-spacing: 0.10em;
     border-bottom: 1px solid #cfb56a;
     margin: 16.5px 0 16.5px 15px;
@@ -257,6 +277,7 @@ header.global-header {
         display: block;
         float: left;
         list-style: none;
+        margin: 0;
     }
     .header-links-1 li{
         float: left;
@@ -284,13 +305,14 @@ header.global-header {
         line-height: 1em;
         letter-spacing: 0.05em; 
     }
-    .header-logo{
+    .header-logo-wrap{
 
     }
     .logo-big{ 
         display: inline-block;
         position: relative;      
         left: -87px;
+        z-index: 1;
     }
     .logo-small{
         display: none;
@@ -305,6 +327,8 @@ header.global-header {
         padding-top: 22px;
         min-height: auto;
         background: none;
+        transition: none;
+        transform: none;
     }
     .nav {
 
@@ -382,7 +406,7 @@ header.global-header {
         opacity: 1;
     }
     .sub-nav-group li{
-        display: block;
+        display: block!important;
         list-style-type: none;
         text-align: left;
         margin: 0;
@@ -407,6 +431,8 @@ header.global-header {
         color: #fff;
         width: 100%;
         max-width: 100%;
+        border: none;
+        margin: 0;
     }
     .sub-nav-group li:first-child a{
         display: inline-block;
@@ -418,6 +444,14 @@ header.global-header {
         letter-spacing: 0.15em;
         text-transform: uppercase;
         color: #fff;
+        margin: 0;
+    }
+    .sub-nav-group.image-group li a{
+        border: none;
+        margin: 0;
+    }
+    .sub-nav-content .image-group img{
+        display: block;
     }
     .sub-nav-content ul {
         display: inline-block;
@@ -430,6 +464,10 @@ header.global-header {
         margin-right: 0;
     }
     .nav-mobile-links{
+        display: none;
+    }
+
+    .mobile-nav-toggle{
         display: none;
     }
 }
