@@ -24,3 +24,14 @@ $("nav:first").accessibleMegaMenu({
     /* css class for the open state */
     openClass: "open"
 });
+
+$(document).ready(function(){
+    $('.nav-menu .nav-item .nav-l1').on('click', function(){
+        $(this).closest('.nav-item').toggleClass("l1-open");
+    });
+
+    $('.mobile-nav-toggle').on('click', function(){
+        $(this).toggleClass("mobile-nav-active");
+        $('.nav-wrapper').toggleClass("nav-open");
+    });
+})

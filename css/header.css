@@ -130,7 +130,7 @@ header.global-header {
 }
 .mobile-bag,
 .mobile-search,
-.mobile-nav-open{
+.mobile-nav-toggle{
     display: inline-block;
     padding: 18px 15px;
 }
@@ -144,14 +144,20 @@ header.global-header {
     display: block;
     float: left;
 }
-
 .nav-wrapper{
+    display: none;
     width: 80%;
     min-height: calc(100vh - 50px);
     background: #3c1c0d;
 }
+.nav-wrapper.nav-open{
+    display: block;
+}
 .nav-item .sub-nav{
     display: none;
+}
+.nav-item.l1-open .sub-nav{
+    display: block;
 }
 .nav-item{
     border-bottom: 1px solid #4d3722;
@@ -182,7 +188,7 @@ header.global-header {
 .sub-nav-content .image-group li:not(:first-child){
     display: none;
 }
-ul.sub-nav-group li:first-child a{
+.sub-nav-group li:first-child a{
     font-size: 0.875em;
     font-family: Arial;
     text-transform: uppercase;
@@ -193,7 +199,7 @@ ul.sub-nav-group li:first-child a{
     margin: 16.5px 0 16.5px 15px;
     box-sizing: border-box;
 }
-ul.sub-nav-group li a{
+.sub-nav-group li a{
     font-size: 0.9375em;
     font-family: Arial;
     text-decoration: none;
@@ -201,18 +207,22 @@ ul.sub-nav-group li a{
     letter-spacing: 0.05em;
     display: inline-block;
     margin: 16.5px 0 16.5px 30px;
-    box-sizing: border-box;
 }
-ul.sub-nav-group.image-group li a{
+.sub-nav-group.image-group li a{
     font-size: 0.875em;
-    font-family: Arial;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #fff;
     letter-spacing: 0.10em;
-    display: inline-block;
     border-bottom: 1px solid #cfb56a;
     margin: 16.5px 0 16.5px 15px;
+}
+.nav-mobile-links a {
+    font-size: 0.9375em;
+    font-family: Arial;
+    color: #cfb56a;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+    letter-spacing: 0.05em;
+    padding: 16.5px 0 16.5px 15px;
     box-sizing: border-box;
 }
 
@@ -312,6 +322,10 @@ ul.sub-nav-group.image-group li a{
         display: inline-block;
         padding: 0;
         margin: 0;
+        border: none;
+    }
+    .nav-item:first-child{
+        border: none;
     }
     .nav-item > a{
         position: relative;
@@ -414,6 +428,9 @@ ul.sub-nav-group.image-group li a{
     }
     .sub-nav-content ul:last-child {
         margin-right: 0;
+    }
+    .nav-mobile-links{
+        display: none;
     }
 }
 
